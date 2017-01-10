@@ -1,15 +1,19 @@
-﻿using Sitecore.Configuration;
-using Sitecore.Data;
-using Sitecore.Diagnostics;
-using Sitecore.Events.Hooks;
-using Sitecore.Globalization;
-using Sitecore.SecurityModel;
-using System.Threading;
-
-namespace Sitecore.Support.Hooks
+﻿namespace Sitecore.Support.Hooks
 {
+  using Sitecore.Configuration;
+  using Sitecore.Data;
+  using Sitecore.Diagnostics;
+  using Sitecore.Events.Hooks;
+  using Sitecore.Globalization;
+  using Sitecore.SecurityModel;
+
   public class AddingECMAutopublish : IHook
   {
+    [UsedImplicitly]
+    public AddingECMAutopublish()
+    {
+    }
+
     public void Initialize()
     {
       using (new SecurityDisabler())

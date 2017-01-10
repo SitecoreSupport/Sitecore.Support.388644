@@ -30,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,10 +39,11 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sitecore.EmailCampaign">
-      <HintPath>..\..\lib\Sitecore.EmailCampaign.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EXM.Sitecore.EmailCampaign.2.1.3\lib\Sitecore.EmailCampaign.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
@@ -49,16 +51,14 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sitecore\Support\Workflows\Simple\PublishAction.cs" />
-    <Compile Include="Sitecore\Support\Modules\EmailCampaign\Core\Pipelines\DispatchNewsletter\PublishMessage.cs" />
-    <Compile Include="Sitecore\Support\Hooks\AddingECMAutopublish.cs" />
+    <Compile Include="Workflows\Simple\PublishAction.cs" />
+    <Compile Include="Modules\EmailCampaign\Core\Pipelines\DispatchNewsletter\PublishMessage.cs" />
+    <Compile Include="Hooks\AddingECMAutopublish.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\zzz\Sitecore.Support.388644.config">
